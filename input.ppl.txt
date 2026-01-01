@@ -1,0 +1,54 @@
+# ------------------------------------------------------
+#  Test Program for Plain Programming Language (PPL)
+#  Covers: INTEGER, LIST, ASSIGN, CHS, ADD, MERGE, COPY,
+#          HEAD, TAIL, IF, HLT, and PRINT
+# ------------------------------------------------------
+
+# --- Integer declarations and operations ---
+INTEGER a
+INTEGER b
+ASSIGN a 5        # a = 5
+ASSIGN b 3        # b = 3
+ADD a b           # a = a + b => 8
+CHS b             # b = -3
+PRINT a
+PRINT b
+
+# --- Create and manipulate lists ---
+LIST L1
+LIST L2
+
+# Merge integers and lists into L1
+MERGE a L1        # L1 = [8]
+MERGE b L1        # L1 = [-3, 8]
+PRINT L1
+
+# Copy list L1 -> L2
+COPY L1 L2
+PRINT L2
+
+# --- Test HEAD and TAIL ---
+INTEGER h
+LIST t
+HEAD L1 h         # h = first element (-3)
+TAIL L1 t         # t = tail ([8])
+PRINT h
+PRINT t
+
+# --- Nested lists ---
+LIST inner
+INTEGER x
+ASSIGN x 42
+MERGE x inner     # inner = [42]
+MERGE inner L1    # L1 = [[42], -3, 8]
+PRINT L1
+
+# --- Conditional jumps ---
+INTEGER zero
+ASSIGN zero 0
+IF zero 50        # jump to PRINT L1 if zero == 0 or empty
+PRINT zero         # skipped if jump works
+
+# jump target:
+PRINT L1
+HLT
