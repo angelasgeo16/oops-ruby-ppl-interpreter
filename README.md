@@ -1,2 +1,2 @@
 # oops-ruby-ppl-interpreter
-An interpreter for Plain Programming Language (PPL) is implemented in Ruby that executes simple PPL programs composed of line-based instructions that manipulate integers and linked lists.
+An interpreter for Plain Programming Language (PPL) is implemented in Ruby that executes simple PPL programs composed of line-based instructions that manipulate integers and linked lists. The language supports variable declarations, arithmetic, list manipulation, conditionals, and program control flow. The interpreter reads a text file (.ppl) containing one instruction per line and executes statements sequentially from top to bottom unless control flow instructions alter this order.
